@@ -168,3 +168,14 @@ footer {
   }
 }
 
+/* Copy icon */
+.copy-icon {
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.copy-icon:hover {
+  opacity: 0.7;
+}
+
