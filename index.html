@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <title>Sri Ugra Narasimha Swamy Devasthanam</title>
+
+  <!-- Mobile friendly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<!-- =========================
+     BACKGROUND DEVOTIONAL MUSIC
+     (Home page only)
+========================= -->
+<audio id="bgMusic" autoplay loop muted>
+  <source src="audio/om-namo-venkatesaya-mp3.org.mp3" type="audio/mpeg">
+  Your browser does not support audio.
+</audio>
+
+<button id="audioControl" onclick="toggleAudio()">🔇</button>
+
+<!-- =========================
+     HEADER / HERO
+========================= -->
+<header>
+  <h1 class="lang-te">శ్రీ ఉగ్ర నరసింహ స్వామి దేవస్థానం</h1>
+  <h1 class="lang-en" style="display:none;">Sri Ugra Narasimha Swamy Devasthanam</h1>
+
+  <p class="lang-te">సంగినేనిపల్లి గ్రామం</p>
+  <p class="lang-en" style="display:none;">Sanginenipalli Village</p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="events.html">Events</a>
+    <a href="donate.html">Donate</a>
+    <a href="youtube.html">YouTube</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- =========================
+     LANGUAGE TOGGLE
+========================= -->
+<div class="lang-toggle">
+  <button onclick="toggleLang()">తెలుగు / English</button>
+</div>
+
+<!-- =========================
+     RECENT EVENT (SUMMARY)
+========================= -->
+<section class="section-card">
+  <h2 class="lang-te">తాజా మహోత్సవం</h2>
+  <h2 class="lang-en" style="display:none;">Recent Event</h2>
+
+  <p><strong>13-01-2026 నుండి 15-01-2026 వరకు</strong></p>
+
+  <ul>
+    <li>అంకురార్పణ, స్వస్తి పుణ్యాహవచనం</li>
+    <li>సుదర్శన నరసింహ హోమం, శతఘటాభిషేకం</li>
+    <li>లక్ష్మీ నరసింహ కళ్యాణం, పల్లకి సేవ</li>
+  </ul>
+
+  <a href="event-details.html" class="btn">View Full Details</a>
+</section>
+
+<!-- =========================
+     DONATION QUICK ACCESS
+========================= -->
+<section class="section-card">
+  <h2 class="lang-te">విరాళాలు</h2>
+  <h2 class="lang-en" style="display:none;">Donations</h2>
+
+  <p class="lang-te">
+    దేవాలయ సేవా కార్యక్రమాలకు మీ వంతు సహకారం అందించండి.
+  </p>
+  <p class="lang-en" style="display:none;">
+    Support temple seva activities through your generous donations.
+  </p>
+
+  <a href="donate.html" class="btn">Donate Now</a>
+</section>
+
+<!-- =========================
+     LOCATION
+========================= -->
+<section class="section-card">
+  <h2 class="lang-te">ఆలయ స్థానం</h2>
+  <h2 class="lang-en" style="display:none;">Temple Location</h2>
+
+  <iframe
+    src="https://www.google.com/maps?q=Sri+Ugra+Narasimha+Swamy+Temple+Sanginenipalli&output=embed"
+    width="100%"
+    height="350"
+    style="border:0;"
+    loading="lazy">
+  </iframe>
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer>
+  <p>
+    “ఉగ్రం వీరం మహావిష్ణుం జ్వలంతం సర్వతోముఖం<br>
+    నృసింహం భీషణం భద్రం మృత్యోర్మృత్యుం నమామ్యహం”
+  </p>
+
+  <p>📞 9390947264 | 📧 sunsss.snp@gmail.com</p>
+  <p>© Sri Ugra Narasimha Swamy Devasthanam</p>
+</footer>
+
+<!-- =========================
+     SCRIPTS
+========================= -->
+<script>
+  /* Language toggle */
+  function toggleLang() {
+    document.querySelectorAll('.lang-te').forEach(el => {
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    });
+    document.querySelectorAll('.lang-en').forEach(el => {
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    });
+  }
+
+  /* Audio toggle */
+  const audio = document.getElementById("bgMusic");
+  const control = document.getElementById("audioControl");
+
+  function toggleAudio() {
+    if (audio.muted) {
+      audio.muted = false;
+      audio.play();
+      control.textContent = "🔊";
+    } else {
+      audio.muted = true;
+      control.textContent = "🔇";
+    }
+  }
+</script>
+
+</body>
+</html>
 
