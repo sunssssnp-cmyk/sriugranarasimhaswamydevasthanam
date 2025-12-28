@@ -191,21 +191,32 @@ footer {
 
 
 /* =========================
-   TOP CONTROLS – BELOW NAV
+   LANGUAGE TOGGLE – BELOW NAV
 ========================= */
-
-/* Language toggle – below header/nav */
 .lang-toggle {
   position: fixed;
-  top: 190px;        /* pushed down below Home menu */
+  top: 130px;        /* below Home / About / Contact */
   right: 20px;
   z-index: 99999;
 }
 
-/* Audio control – slightly lower than language */
+.lang-toggle button {
+  background: #6b0f1a;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   MUSIC ICON – FIXED
+========================= */
 #audioControl {
   position: fixed;
-  top: 170px;        /* aligned vertically below language toggle */
+  top: 190px;        /* slightly below language toggle */
   right: 20px;
   z-index: 99999;
 
