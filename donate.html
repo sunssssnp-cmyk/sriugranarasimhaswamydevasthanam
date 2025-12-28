@@ -60,30 +60,36 @@
 </section>
 
 <!-- =========================
-     UPI DONATION (ONLY)
+     UPI DONATION WITH QR
 ========================= -->
 <section class="section-card">
   <h2 class="lang-te">UPI ద్వారా విరాళం</h2>
   <h2 class="lang-en" style="display:none;">Donate via UPI</h2>
 
-  <p><strong>UPI ID:</strong></p>
-  <p style="font-size:20px; color:#6b0f1a;">
-    <strong>ugranarasimhaswamytemple@sbi</strong>
-  </p>
-
   <p class="lang-te">
-    Google Pay, PhonePe, Paytm లేదా ఇతర UPI యాప్‌ల ద్వారా
-    పై UPI ID కి విరాళం పంపవచ్చు.
+    క్రింద ఉన్న QR కోడ్ స్కాన్ చేయండి లేదా UPI ID కాపీ చేసి
+    Google Pay, PhonePe, Paytm ద్వారా విరాళం పంపవచ్చు.
   </p>
 
   <p class="lang-en" style="display:none;">
-    You may donate using Google Pay, PhonePe, Paytm,
-    or any UPI-enabled application.
+    Scan the QR code or copy the UPI ID to donate using
+    Google Pay, PhonePe, Paytm, or any UPI app.
   </p>
 
-  <!-- Optional QR Code (add later) -->
-  <!-- <img src="images/upi-qr.png" alt="UPI QR Code" width="220"> -->
+  <!-- QR Image -->
+  <img src="images/upi-qr.jpg" alt="UPI QR Code"
+       style="max-width:260px; width:100%; margin:15px auto; display:block;">
+
+  <!-- UPI ID -->
+  <p style="font-size:18px; text-align:center;">
+    <strong id="upiId">ugranarasimhaswamytemple@sbi</strong>
+  </p>
+
+  <button class="btn" onclick="copyText('upiId')">
+    Copy UPI ID
+  </button>
 </section>
+
 <!-- =========================
      BANK ACCOUNT DETAILS
 ========================= -->
