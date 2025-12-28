@@ -197,8 +197,8 @@ footer {
 /* Language toggle – below header/nav */
 .lang-toggle {
   position: fixed;
-  top: 120px;        /* pushed down below Home menu */
-  right: 90px;
+  top: 140px;        /* pushed down below Home menu */
+  right: 20px;
   z-index: 99999;
 }
 
