@@ -191,21 +191,21 @@ footer {
 
 
 /* =========================
-   TOP CONTROLS – MOBILE FRIENDLY
+   TOP CONTROLS – BELOW NAV
 ========================= */
 
-/* Language toggle */
+/* Language toggle – below header/nav */
 .lang-toggle {
   position: fixed;
-  top: 18px;
-  right: 90px;   /* more space from music icon */
+  top: 120px;        /* pushed down below Home menu */
+  right: 90px;
   z-index: 99999;
 }
 
-/* Audio control (slightly lower) */
+/* Audio control – slightly lower than language */
 #audioControl {
   position: fixed;
-  top: 64px;     /* moved DOWN for clarity */
+  top: 170px;        /* aligned vertically below language toggle */
   right: 20px;
   z-index: 99999;
 
