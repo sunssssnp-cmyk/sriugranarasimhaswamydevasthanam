@@ -130,24 +130,7 @@ footer {
   font-size: 14px;
 }
 
-/* =========================
-   AUDIO BUTTON
-========================= */
-#audioControl {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #6b0f1a;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 22px;
-  cursor: pointer;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-  z-index: 1000;
-}
+
 
 /* =========================
    RESPONSIVE
@@ -206,17 +189,22 @@ footer {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* Music icon round */
-#audioControl {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  font-size: 18px;
-  padding: 0;
+
+/* =========================
+   TOP RIGHT CONTROLS
+========================= */
+
+/* Language toggle fixed */
+.lang-toggle {
+  position: fixed;
+  top: 18px;
+  right: 80px;
+  z-index: 99999;
 }
-/* Force audio button to top-right corner */
+
+/* Audio control fixed */
 #audioControl {
-  position: fixed !important;
+  position: fixed;
   top: 18px;
   right: 18px;
   z-index: 99999;
@@ -232,12 +220,3 @@ footer {
 
   box-shadow: 0 4px 12px rgba(0,0,0,0.35);
 }
-
-/* Optional: language toggle also fixed */
-.lang-toggle {
-  position: fixed;
-  top: 18px;
-  right: 70px;
-  z-index: 99999;
-}
-
