@@ -25,7 +25,7 @@
   Your browser does not support audio.
 </audio>
 
-<button id="audioControl" onclick="toggleAudio()">🔇</button>
+
 
 <!-- =========================
      HEADER / HERO
@@ -51,9 +51,16 @@
 <!-- =========================
      LANGUAGE TOGGLE
 ========================= -->
-<div class="lang-toggle">
+<div class="top-controls">
   <button onclick="toggleLang()">తెలుగు / English</button>
+
+  <button id="audioControl"
+          onclick="toggleAudio()"
+          title="Tap to enable music">
+    🔇
+  </button>
 </div>
+
 
 <!-- =========================
      RECENT EVENT (SUMMARY)
