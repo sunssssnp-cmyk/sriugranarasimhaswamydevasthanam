@@ -80,10 +80,11 @@
   <img src="images/upi-qr.jpg" alt="UPI QR Code"
        style="max-width:260px; width:100%; margin:15px auto; display:block;">
 
-  <!-- UPI ID -->
   <p style="font-size:18px; text-align:center;">
-    <strong id="upiId">ugranarasimhaswamytemple@sbi</strong>
-  </p>
+  <strong id="upiId">ugranarasimhaswamytemple@sbi</strong>
+  <span class="copy-icon" onclick="copyText('upiId')" title="Copy UPI ID">📋</span>
+</p>
+
 
   <button class="btn" onclick="copyText('upiId')">
     Copy UPI ID
@@ -103,15 +104,12 @@
       <td>SRI UGRA NARASIMHA SWAMY SEVA SOCIETY</td>
     </tr>
     <tr>
-      <td><strong>Account Number</strong></td>
-      <td>
-        <span id="accountNumber">44569118226</span><br>
-        <button class="btn" style="margin-top:8px;"
-                onclick="copyText('accountNumber')">
-          Copy Account Number
-        </button>
-      </td>
-    </tr>
+  <td><strong>Account Number</strong></td>
+  <td>
+    <span id="accountNumber">44569118226</span>
+    <span class="copy-icon" onclick="copyText('accountNumber')" title="Copy Account Number">📋</span>
+  </td>
+</tr>
     <tr>
       <td><strong>IFSC</strong></td>
       <td>SBIN0022049</td>
@@ -125,6 +123,32 @@
       <td>State Bank of India</td>
     </tr>
   </table>
+</section>
+
+<!-- =========================
+     SEND RECEIPT VIA WHATSAPP
+========================= -->
+<section class="section-card" style="text-align:center;">
+  <h2 class="lang-te">రిసీప్ట్ పంపండి</h2>
+  <h2 class="lang-en" style="display:none;">Send Receipt</h2>
+
+  <p class="lang-te">
+    విరాళం పంపిన తరువాత, స్క్రీన్‌షాట్‌ను
+    WhatsApp ద్వారా పంపవచ్చు.
+  </p>
+
+  <p class="lang-en" style="display:none;">
+    After donating, you may send the payment screenshot
+    via WhatsApp for receipt confirmation.
+  </p>
+
+  <a
+    href="https://wa.me/919390947264?text=I%20have%20made%20a%20donation%20to%20Sri%20Ugra%20Narasimha%20Swamy%20Devasthanam.%20Please%20find%20the%20payment%20receipt%20attached."
+    target="_blank"
+    class="btn"
+    style="background:#25D366;">
+    Send Receipt on WhatsApp
+  </a>
 </section>
 
 
