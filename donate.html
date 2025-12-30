@@ -71,28 +71,54 @@
   <h2 class="lang-en" style="display:none;">Donate via UPI</h2>
 
   <p class="lang-te">
-    క్రింద ఉన్న QR కోడ్ స్కాన్ చేయండి లేదా UPI ID కాపీ చేసి
-    Google Pay, PhonePe, Paytm ద్వారా విరాళం పంపవచ్చు.
+    క్రింద ఉన్న QR కోడ్ స్కాన్ చేయండి లేదా మొత్తాన్ని ఎంచుకుని
+    PhonePe / Google Pay ద్వారా విరాళం పంపవచ్చు.
   </p>
 
   <p class="lang-en" style="display:none;">
-    Scan the QR code or copy the UPI ID to donate using
-    Google Pay, PhonePe, Paytm, or any UPI app.
+    Scan the QR code or select an amount to donate via
+    PhonePe / Google Pay or any UPI app.
   </p>
 
   <!-- QR Image -->
-  <img src="images/upi-qr.jpg" alt="UPI QR Code"
-       style="max-width:260px; width:100%; margin:15px auto; display:block;">
+  <div style="text-align:center;">
+    <img src="images/upi-qr.jpg"
+         alt="UPI QR Code"
+         style="max-width:260px;width:100%;margin:15px auto;border-radius:12px;">
+    <p style="font-size:14px;color:#555;">📱 Scan QR using UPI app</p>
+  </div>
 
-  <p style="font-size:18px; text-align:center;">
-  <strong id="upiId">ugranarasimhaswamytemple@sbi</strong>
-  <span class="copy-icon" onclick="copyText('upiId')" title="Copy UPI ID">📋</span>
-</p>
+  <!-- UPI ID with Copy -->
+  <p style="font-size:18px;text-align:center;">
+    <strong id="upiId">ugranarasimhaswamytemple@sbi</strong>
+    <span class="copy-icon" onclick="copyText('upiId')" title="Copy UPI ID">📋</span>
+  </p>
 
+  <!-- Preset Amount Buttons -->
+  <div style="text-align:center;margin-top:20px;">
+    <a class="btn" href="upi://pay?pa=ugranarasimhaswamytemple@sbi&pn=SRI%20UGRA%20NARASIMHA%20SWAMY%20SEVA%20SOCIETY&am=101&cu=INR">₹101</a>
+    <a class="btn" href="upi://pay?pa=ugranarasimhaswamytemple@sbi&pn=SRI%20UGRA%20NARASIMHA%20SWAMY%20SEVA%20SOCIETY&am=501&cu=INR">₹501</a>
+    <a class="btn" href="upi://pay?pa=ugranarasimhaswamytemple@sbi&pn=SRI%20UGRA%20NARASIMHA%20SWAMY%20SEVA%20SOCIETY&am=1001&cu=INR">₹1001</a>
+  </div>
 
-  <button class="btn" onclick="copyText('upiId')">
-    Copy UPI ID
-  </button>
+  <!-- Custom Amount -->
+  <div style="text-align:center;margin-top:25px;">
+    <p><strong>Enter Custom Amount</strong></p>
+    <input type="number"
+           id="customAmount"
+           placeholder="Enter amount in ₹"
+           style="padding:10px;width:200px;border-radius:8px;border:1px solid #ccc;">
+
+    <br><br>
+
+    <button class="btn" onclick="payCustomAmount()">
+      Pay via PhonePe / GPay
+    </button>
+
+    <p style="font-size:13px;color:#555;">
+      UPI app opens on mobile devices only
+    </p>
+  </div>
 </section>
 
 <!-- =========================
@@ -215,6 +241,21 @@
     });
   }
 </script>
+<script>
+  function payCustomAmount() {
+    const amount = document.getElementById("customAmount").value;
+    if (!amount || amount <= 0) {
+      alert("Please enter a valid amount");
+      return;
+    }
 
+    const upiUrl =
+      `upi://pay?pa=ugranarasimhaswamytemple@sbi&pn=SRI%20UGRA%20NARASIMHA%20SWAMY%20SEVA%20SOCIETY&am=${amount}&cu=INR&tn=Temple%20Donation`;
+
+    window.location.href = upiUrl;
+  }
+</script>
+
+  
 </body>
 </html>
