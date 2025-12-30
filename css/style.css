@@ -232,15 +232,25 @@ footer {
   box-shadow: 0 4px 12px rgba(0,0,0,0.35);
 }
 
-/* Temple Logo */
-.site-logo {
-  width: 90px;          /* perfect for header */
-  height: auto;
-  margin-bottom: 8px;
-}
-@media (max-width: 768px) {
-  .site-logo {
-    width: 70px;
-  }
+/* =========================
+   SITE LOGO
+========================= */
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
 }
 
+.site-logo {
+  width: 120px;          /* desktop size */
+  max-width: 35vw;       /* responsive */
+  height: auto;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.4));
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .site-logo {
+    width: 90px;
+  }
+}
