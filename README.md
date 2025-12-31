@@ -233,6 +233,14 @@ site:sriugranarasimhaswamydevasthanam.com
 
 ---
 
+****
+<p style="margin-top:10px; font-size:13px;">
+  👥 మొత్తం సందర్శకులు / Total Visitors:
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=sriugranarasimhaswamydevasthanam">
+</p>
+
+#to rest count, we can place new page_id=newname , then count will be reset. all html footer needs to update same page id will show same count. 
+
 ## ⚠️ Important Notes
 
 * Do NOT remove Google verification file
