@@ -226,3 +226,38 @@ footer {
     width: 90px;
   }
 }
+/* =========================
+   HOME PAGE – TOP LEFT DEITY IMAGE
+========================= */
+.home-deity {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  z-index: 5;
+}
+
+.home-deity img {
+  width: 120px;
+  height: auto;
+  border-radius: 14px;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.45);
+
+  background: #fff;
+  padding: 6px;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .home-deity {
+    position: relative;
+    margin: 10px auto 6px;
+    text-align: center;
+  }
+
+  .home-deity img {
+    width: 95px;
+  }
+}
+
