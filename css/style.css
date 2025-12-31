@@ -227,37 +227,45 @@ footer {
   }
 }
 /* =========================
-   HOME PAGE – TOP LEFT DEITY IMAGE
+   HOME PAGE – SMALL DEITY IMAGE (FIXED)
 ========================= */
 .home-deity {
   position: absolute;
-  top: 22px;
-  left: 22px;
+  top: 18px;
+  left: 18px;
   z-index: 5;
 }
 
 .home-deity img {
-  width: 120px;
+  width: 120px;          /* ≈ 15–20% of current size */
   height: auto;
-  border-radius: 14px;
-
-  box-shadow:
-    0 8px 20px rgba(0,0,0,0.45);
+  border-radius: 10px;
 
   background: #fff;
-  padding: 6px;
+  padding: 4px;
+
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.4);
 }
 
-/* Mobile adjustment */
-@media (max-width: 768px) {
-  .home-deity {
-    position: relative;
-    margin: 10px auto 6px;
-    text-align: center;
-  }
-
+/* Tablet */
+@media (max-width: 1024px) {
   .home-deity img {
     width: 95px;
   }
 }
 
+/* Mobile */
+@media (max-width: 768px) {
+  .home-deity {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 8px auto 6px;
+    text-align: center;
+  }
+
+  .home-deity img {
+    width: 70px;        /* ~15% feel on mobile */
+  }
+}
