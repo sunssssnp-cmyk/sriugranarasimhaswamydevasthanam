@@ -8,13 +8,40 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-    .gallery-grid img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    }
+    /* =========================
+   INNER GALLERY GRID
+========================= */
+.inner-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;                 /* SPACE BETWEEN PHOTOS */
+  margin-top: 20px;
+}
+
+/* Image Card */
+.inner-gallery-item {
+  background: #fff;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+/* Image itself */
+.inner-gallery-item img {
+  width: 100%;
+  height: 220px;             /* NORMAL SIZE */
+  object-fit: cover;         /* NO DISTORTION */
+  border-radius: 12px;
+  display: block;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .inner-gallery-item img {
+    height: 180px;
+  }
+}
+
   </style>
 </head>
 
@@ -34,15 +61,36 @@
 </div>
 
 <section class="section-card">
-  <div class="gallery-grid">
 
-    <!-- SAMPLE IMAGES -->
-    <img src="images/gallery/temple/photo1.jpg" alt="Temple View 1">
-    <img src="images/gallery/temple/photo2.jpg" alt="Temple View 2">
-    <img src="images/gallery/temple/photo3.jpg" alt="Temple View 3">
+  <h2 class="lang-te">దేవాలయ దృశ్యాలు</h2>
+  <h2 class="lang-en" style="display:none;">Temple Views</h2>
+
+  <a href="gallery.html" class="btn" style="margin-bottom:20px;">
+    ← Back to Gallery
+  </a>
+
+  <div class="inner-gallery">
+
+    <div class="inner-gallery-item">
+      <img src="images/gallery/temple/photo1.jpg" alt="Temple View 1">
+    </div>
+
+    <div class="inner-gallery-item">
+      <img src="images/gallery/temple/photo2.jpg" alt="Temple View 2">
+    </div>
+
+    <div class="inner-gallery-item">
+      <img src="images/gallery/temple/photo3.jpg" alt="Temple View 3">
+    </div>
+
+    <div class="inner-gallery-item">
+      <img src="images/gallery/temple/photo4.jpg" alt="Temple View 4">
+    </div>
 
   </div>
+
 </section>
+
 
 <footer>
   <p>© Sri Ugra Narasimha Swamy Seva Society</p>
