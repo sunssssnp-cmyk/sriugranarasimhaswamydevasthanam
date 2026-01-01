@@ -202,16 +202,14 @@
   }
 </script>
 <script>
+  const slides = document.querySelectorAll(".home-slider .slide");
   let currentSlide = 0;
-  const slides = document.querySelectorAll(".slide");
 
-  function showNextSlide() {
+  setInterval(() => {
     slides[currentSlide].classList.remove("active");
     currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].classList.add("active");
-  }
-
-  setInterval(showNextSlide, 4500);
+  }, 5000); // 5 seconds (slow & calm)
 </script>
 
 </body>
