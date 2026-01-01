@@ -2,110 +2,115 @@
 <html lang="te">
 <head>
   <meta charset="UTF-8">
-  <title>Temple View | Gallery</title>
+  <title>Temple Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-    /* =========================
-   INNER GALLERY GRID
-========================= */
-.inner-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 22px;                 /* SPACE BETWEEN PHOTOS */
-  margin-top: 20px;
-}
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
 
-/* Image Card */
-.inner-gallery-item {
-  background: #fff;
-  border-radius: 16px;
-  padding: 10px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
-}
+    .gallery-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
 
-/* Image itself */
-.inner-gallery-item img {
-  width: 100%;
-  height: 220px;             /* NORMAL SIZE */
-  object-fit: cover;         /* NO DISTORTION */
-  border-radius: 12px;
-  display: block;
-}
+    .gallery-grid img:hover {
+      transform: scale(1.04);
+    }
 
-/* Mobile adjustment */
-@media (max-width: 768px) {
-  .inner-gallery-item img {
-    height: 180px;
-  }
-}
+    /* Fullscreen viewer */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      z-index: 99999;
+      justify-content: center;
+      align-items: center;
+    }
 
+    .lightbox img {
+      max-width: 92%;
+      max-height: 92%;
+      border-radius: 10px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 34px;
+      color: #fff;
+      text-decoration: none;
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-  <h1 class="lang-te">దేవాలయ దృశ్యాలు</h1>
-  <h1 class="lang-en" style="display:none;">Temple View</h1>
-
-  <nav>
-    <a href="gallery.html">← Back to Gallery</a>
-  </nav>
+  <h1>దేవాలయ దృశ్యాలు</h1>
+  <a href="gallery.html" style="color:#ffd966;">← Back to Gallery</a>
 </header>
 
-<div class="lang-toggle">
-  <button onclick="toggleLang()">తెలుగు / English</button>
-</div>
-
 <section class="section-card">
+  <div class="gallery-grid">
 
-  <h2 class="lang-te">దేవాలయ దృశ్యాలు</h2>
-  <h2 class="lang-en" style="display:none;">Temple Views</h2>
-
-  <a href="gallery.html" class="btn" style="margin-bottom:20px;">
-    ← Back to Gallery
-  </a>
-
-  <div class="inner-gallery">
-
-    <div class="inner-gallery-item">
+    <!-- IMAGE 1 -->
+    <a href="#img1">
       <img src="images/gallery/temple/photo1.jpg" alt="Temple View 1">
-    </div>
+    </a>
 
-    <div class="inner-gallery-item">
+    <!-- IMAGE 2 -->
+    <a href="#img2">
       <img src="images/gallery/temple/photo2.jpg" alt="Temple View 2">
-    </div>
+    </a>
 
-    <div class="inner-gallery-item">
+    <!-- IMAGE 3 -->
+    <a href="#img3">
       <img src="images/gallery/temple/photo3.jpg" alt="Temple View 3">
-    </div>
-
-    <div class="inner-gallery-item">
-      <img src="images/gallery/temple/photo4.jpg" alt="Temple View 4">
-    </div>
+    </a>
+    <!-- IMAGE 3 -->
+    <a href="#img4">
+      <img src="images/gallery/temple/photo4.jpg" alt="Temple View 3">
+    </a>
 
   </div>
-
 </section>
 
+<!-- FULLSCREEN LIGHTBOX -->
+<div id="img1" class="lightbox">
+  <a href="#" class="close">×</a>
+  <img src="images/gallery/temple/photo1.jpg">
+</div>
 
-<footer>
-  <p>© Sri Ugra Narasimha Swamy Seva Society</p>
-</footer>
+<div id="img2" class="lightbox">
+  <a href="#" class="close">×</a>
+  <img src="images/gallery/temple/photo2.jpg">
+</div>
 
-<script>
-function toggleLang() {
-  document.querySelectorAll('.lang-te').forEach(el => {
-    el.style.display = el.style.display === 'none' ? 'block' : 'none';
-  });
-  document.querySelectorAll('.lang-en').forEach(el => {
-    el.style.display = el.style.display === 'none' ? 'block' : 'none';
-  });
-}
-</script>
+<div id="img3" class="lightbox">
+  <a href="#" class="close">×</a>
+  <img src="images/gallery/temple/photo3.jpg">
+</div>
+  <div id="img4" class="lightbox">
+  <a href="#" class="close">×</a>
+  <img src="images/gallery/temple/photo4.jpg">
+</div>
 
 </body>
 </html>
