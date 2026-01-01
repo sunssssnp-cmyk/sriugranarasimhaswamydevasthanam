@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <title>Temple View | Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .gallery-grid img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1 class="lang-te">దేవాలయ దృశ్యాలు</h1>
+  <h1 class="lang-en" style="display:none;">Temple View</h1>
+
+  <nav>
+    <a href="gallery.html">← Back to Gallery</a>
+  </nav>
+</header>
+
+<div class="lang-toggle">
+  <button onclick="toggleLang()">తెలుగు / English</button>
+</div>
+
+<section class="section-card">
+  <div class="gallery-grid">
+
+    <!-- SAMPLE IMAGES -->
+    <img src="images/gallery/temple/photo1.jpg" alt="Temple View 1">
+    <img src="images/gallery/temple/photo2.jpg" alt="Temple View 2">
+    <img src="images/gallery/temple/photo3.jpg" alt="Temple View 3">
+
+  </div>
+</section>
+
+<footer>
+  <p>© Sri Ugra Narasimha Swamy Seva Society</p>
+</footer>
+
+<script>
+function toggleLang() {
+  document.querySelectorAll('.lang-te').forEach(el => {
+    el.style.display = el.style.display === 'none' ? 'block' : 'none';
+  });
+  document.querySelectorAll('.lang-en').forEach(el => {
+    el.style.display = el.style.display === 'none' ? 'block' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>
