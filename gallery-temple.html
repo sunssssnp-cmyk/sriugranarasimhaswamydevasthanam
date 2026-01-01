@@ -70,24 +70,17 @@
 <section class="section-card">
   <div class="gallery-grid">
 
-    <!-- IMAGE 1 -->
-    <a href="#img1">
-      <img src="images/gallery/temple/photo1.jpg" alt="Temple View 1">
-    </a>
+   <a href="#img1">
+  <img src="images/gallery/temple/photo1.jpg" data-index="1">
+</a>
 
-    <!-- IMAGE 2 -->
-    <a href="#img2">
-      <img src="images/gallery/temple/photo2.jpg" alt="Temple View 2">
-    </a>
+<a href="#img2">
+  <img src="images/gallery/temple/photo2.jpg" data-index="2">
+</a>
 
-    <!-- IMAGE 3 -->
-    <a href="#img3">
-      <img src="images/gallery/temple/photo3.jpg" alt="Temple View 3">
-    </a>
-    <!-- IMAGE 3 -->
-    <a href="#img4">
-      <img src="images/gallery/temple/photo4.jpg" alt="Temple View 3">
-    </a>
+<a href="#img3">
+  <img src="images/gallery/temple/photo3.jpg" data-index="3">
+</a>
 
   </div>
 </section>
@@ -111,6 +104,37 @@
   <a href="#" class="close">×</a>
   <img src="images/gallery/temple/photo4.jpg">
 </div>
+
+<script>
+let startX = 0;
+let endX = 0;
+
+document.querySelectorAll('.lightbox img').forEach((img, index) => {
+
+  img.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  });
+
+  img.addEventListener('touchend', e => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe(index + 1);
+  });
+
+});
+
+function handleSwipe(currentIndex) {
+  const threshold = 50;
+  const total = document.querySelectorAll('.lightbox').length;
+
+  if (startX - endX > threshold && currentIndex < total) {
+    location.hash = 'img' + (currentIndex + 1);
+  }
+
+  if (endX - startX > threshold && currentIndex > 1) {
+    location.hash = 'img' + (currentIndex - 1);
+  }
+}
+</script>
 
 </body>
 </html>
