@@ -64,6 +64,18 @@
 </header>
 
 <!-- =========================
+     HOME IMAGE SLIDER
+========================= -->
+<section class="home-slider">
+  <div class="slider">
+    <img src="images/slider/slide1.jpg" class="slide active" alt="Temple View 1">
+    <img src="images/slider/slide2.jpg" class="slide" alt="Temple View 2">
+    <img src="images/slider/slide3.jpg" class="slide" alt="Temple View 3">
+    <img src="images/slider/slide4.jpg" class="slide" alt="Temple View 4">
+  </div>
+</section>
+  
+<!-- =========================
      LANGUAGE TOGGLE
 ========================= -->
 <!-- Language Toggle -->
@@ -188,6 +200,18 @@
       control.textContent = "🔇";
     }
   }
+</script>
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function showNextSlide() {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  }
+
+  setInterval(showNextSlide, 4500);
 </script>
 
 </body>
