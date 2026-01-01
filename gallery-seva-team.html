@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <title>Seva Society Team</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 26px;
+      margin-top: 30px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.04);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 99999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 92%;
+      max-height: 92%;
+      border-radius: 12px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 34px;
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+<h1 class="lang-te">సేవా సంఘం బృందం</h1>
+<h1 class="lang-en" style="display:none;">Seva Society Team</h1>
+  <a href="gallery.html" style="color:#ffd966;">← Back to Gallery</a>
+</header>
+
+<section class="section-card">
+  <div class="gallery-grid">
+
+    <a href="#img1">
+      <img src="images/gallery/guests/photo1.jpg">
+    </a>
+
+    <a href="#img2">
+      <img src="images/gallery/guests/photo2.jpg">
+    </a>
+
+    <a href="#img3">
+      <img src="images/gallery/guests/photo3.jpg">
+    </a>
+
+  </div>
+</section>
+
+<div id="img1" class="lightbox">
+  <a href="#" class="close">×</a>
+  <img src="images/gallery/guests/photo1.jpg">
+</div>
+
+<div id="img2" class="lightbox">
+  <a href="#" class="close">×</a>
+  <img src="images/gallery/guests/photo2.jpg">
+</div>
+
+<div id="img3" class="lightbox">
+  <a href="#" class="close">×</a>
+  <img src="images/gallery/guests/photo3.jpg">
+</div>
+
+</body>
+</html>
 
