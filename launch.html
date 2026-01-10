@@ -99,7 +99,7 @@
 
 <script>
   /* Countdown */
-  let count = 5;
+  let count = 60;
   const counter = document.getElementById("countdown");
 
   const timer = setInterval(() => {
@@ -122,7 +122,7 @@
 
     setTimeout(() => flower.remove(), 6000);
   }
-  setInterval(createFlower, 300);
+  setInterval(createFlower, 500);
 
   /* Bell sound (user interaction required) */
   function playBell() {
