@@ -93,7 +93,7 @@
 </div>
 
 <!-- Bell sound -->
-<audio id="bell">
+<audio id="bell" loop>
   <source src="audio/bell.mp3" type="audio/mpeg">
 </audio>
 
@@ -126,9 +126,11 @@
 
   /* Bell sound (user interaction required) */
   function playBell() {
-    const bell = document.getElementById("bell");
-    bell.play().catch(() => {});
-  }
+  const bell = document.getElementById("bell");
+  bell.volume = 0.5;
+  bell.play().catch(() => {});
+}
+
 </script>
 
 </body>
