@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <title>Website Launch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: radial-gradient(circle at top, #9b1c27, #3b0a0f);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .container {
+      z-index: 10;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: normal;
+      opacity: 0.9;
+      margin-bottom: 16px;
+    }
+
+    .diya {
+      font-size: 60px;
+      margin: 10px 0 18px;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ffcc66; }
+      to   { text-shadow: 0 0 28px #ff9933; }
+    }
+
+    #countdown {
+      font-size: 44px;
+      color: #ffd966;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .tap {
+      margin-top: 18px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    /* Flower animation */
+    .flower {
+      position: fixed;
+      top: -50px;
+      font-size: 26px;
+      animation: fall linear infinite;
+      opacity: 0.9;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+      }
+    }
+  </style>
+</head>
+
+<body onclick="playBell()">
+
+<div class="container">
+  <h1>శ్రీ ఉగ్ర నరసింహ స్వామి దేవస్థానం</h1>
+  <h2>Sri Ugra Narasimha Swamy Devasthanam</h2>
+
+  <div class="diya">🪔</div>
+
+  <div id="countdown">5</div>
+
+  <div class="tap">
+    🔔 Tap anywhere to begin auspicious launch
+  </div>
+</div>
+
+<!-- Bell sound -->
+<audio id="bell">
+  <source src="audio/bell.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  /* Countdown */
+  let count = 5;
+  const counter = document.getElementById("countdown");
+
+  const timer = setInterval(() => {
+    count--;
+    counter.textContent = count;
+    if (count === 0) {
+      clearInterval(timer);
+      window.location.href = "index.html";
+    }
+  }, 1000);
+
+  /* Flower sprinkle */
+  function createFlower() {
+    const flower = document.createElement("div");
+    flower.className = "flower";
+    flower.textContent = "🌸";
+    flower.style.left = Math.random() * 100 + "vw";
+    flower.style.animationDuration = (3 + Math.random() * 3) + "s";
+    document.body.appendChild(flower);
+
+    setTimeout(() => flower.remove(), 6000);
+  }
+  setInterval(createFlower, 300);
+
+  /* Bell sound (user interaction required) */
+  function playBell() {
+    const bell = document.getElementById("bell");
+    bell.play().catch(() => {});
+  }
+</script>
+
+</body>
+</html>
