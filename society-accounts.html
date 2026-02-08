@@ -30,6 +30,11 @@
   </nav>
 </header>
 
+<div class="lang-toggle">
+  <button onclick="toggleLang()">తెలుగు / English</button>
+</div>
+
+
 <!-- =========================
      INTRO
 ========================= -->
@@ -140,4 +145,11 @@
 ========================= -->
 <script>
 function toggleLang() {
-  documen
+  document.querySelectorAll('.lang-te').forEach(el => {
+    el.style.display = el.style.display === 'none' ? 'block' : 'none';
+  });
+  document.querySelectorAll('.lang-en').forEach(el => {
+    el.style.display = el.style.display === 'none' ? 'block' : 'none';
+  });
+}
+</script>
